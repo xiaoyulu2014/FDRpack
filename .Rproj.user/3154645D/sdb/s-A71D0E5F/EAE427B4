@@ -1,0 +1,16 @@
+{
+    "contents" : "\nFDR <- function(NumIterations=10000,m,ptruth,l){\n  \n  m0 = ptruth * m ; m1 = m-m0\n  \n  FDR <- c();power <- c()\n  for (t in 1:NumIterations){\n      \n    truth = sort(sample(m)[1:m0])\n    false = setdiff(c(1:m),truth)\n    \n    pp = c()\n    for (i in truth) {pp[i] = min(pnorm(rnorm(1)),1-pnorm(rnorm(1)))*2}\n    \n    for (i in false[1:(m1/4)])  {pp[i] = (1-pnorm(rnorm(1) + l/4))*2}\n    for (i in false[(m1/4+1):(m1/2)]) {pp[i] = (1-pnorm(rnorm(1) + l/2))*2}\n    for (i in false[(m1/2+1):(m1*3/4)]) {pp[i] = (1-pnorm(rnorm(1) + 3*l/4))*2}\n    for (i in false[(m1*3/4+1):(m1)]) {pp[i] = (1-pnorm(rnorm(1) + l))*2}\n    \n    pp_sort = sort(pp)/c(1:m)\n    q = 0.05\n    y = which(pp_sort <= q/m)\n    if (length(y)>0) {\n      k = max(y)    \n      reject = order(pp,decreasing = F)[1:k]\n      FDR[t] = length(intersect(reject,truth))/length(reject)\n      power[t] = length(intersect(reject,false))/length(false)\n    }\n  }\n  return(list(FDR = FDR,power=power))\n}\n    \n    \n    \n    \n    \n    \n    ",
+    "created" : 1423669241595.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3670896860",
+    "id" : "EAE427B4",
+    "lastKnownWriteTime" : 1423668948,
+    "path" : "~/Dropbox/OxWaSP/Applied Stats/FDRpack/R/FDR.R",
+    "project_path" : "R/FDR.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,16 @@
+{
+    "contents" : "Package: ABCpack\nType: Package\nTitle: Approximate Bayesian Computation\nVersion: 1.0\nDate: 2015-02-03\nAuthor: Xiaoyu Lu\nMaintainer: Xiaoyu Lu <xiaoyu.lu@stats.ox.ac.uk>\nDescription: Implementations of some ABC Algorithms.\nLicense: GPL-3\nDepends:\n    MASS\nSuggests:\n    knitr,\n    testthat,\n    mvtnorm,\n    mnormt\nVignetteBuilder: knitr\n",
+    "created" : 1423669286090.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3957817793",
+    "id" : "E4DDE6A8",
+    "lastKnownWriteTime" : 1422987551,
+    "path" : "~/Dropbox/OxWaSP/ABC/ABCpack/DESCRIPTION",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "dcf"
+}

@@ -1,0 +1,16 @@
+{
+    "contents" : "Package: FDRpack\nType: Package\nTitle: False Discovery Rate simulation study\nVersion: 1.0\nDate: 2015-02-11\nAuthor: Xiaoyu Lu\nMaintainer: Xiaoyu Lu <xiaoyu.lu@stats.ox.ac.uk>\nDescription: Simulation studies of the FDR\nLicense: GPL-3\nDepends:\n    MASS\nSuggests:\n    knitr,\n    testthat,\n    mvtnorm,\n    mnormt\nVignetteBuilder: knitr\n",
+    "created" : 1423669453194.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "259787093",
+    "id" : "FC563537",
+    "lastKnownWriteTime" : 1423669363,
+    "path" : "~/Dropbox/OxWaSP/Applied Stats/FDRpack/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "dcf"
+}
